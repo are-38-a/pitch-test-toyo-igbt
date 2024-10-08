@@ -102,7 +102,7 @@ function UI({ updateOscillator }: Props) {
         ※消音モードをオフにしてください
       </Typography>
       <Typography className={style.repo} variant="caption">
-        <Link href="https://github.com/hashedhyphen/pitch-test">
+        <Link href="https://github.com/are-38-a/pitch-test-toyo-igbt">
           GitHub Repo
         </Link>
       </Typography>
