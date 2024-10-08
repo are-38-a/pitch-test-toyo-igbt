@@ -10,7 +10,7 @@ const maxFreq = minFreq + freqRange
 
 function randomMinFreq(freqRange: number): number {
   const shift = Math.round(freqRange * Math.random())
-  return 440 - shift
+  return 1050 - shift
 }
 
 function sliderPosToFreq(sliderPos: number): number {
@@ -20,9 +20,9 @@ function sliderPosToFreq(sliderPos: number): number {
 }
 
 function buildTweetIntentURL(freq: number): string {
-  const text = `私の 440Hz は『${freq}Hz』でした！あなたも音感をテストしよう！`
+  const text = `私の 1050Hz は『${freq}Hz』でした！あなたも音感をテストしよう！`
   const url = window.location.href.split("?")[0]
-  const hashtags = "440Hzを当てるやつ"
+  const hashtags = "1050Hzを当てるやつ"
 
   const usp = new URLSearchParams()
   usp.set("text", text)
@@ -72,7 +72,10 @@ function UI({ updateOscillator }: Props) {
   return (
     <div className={style.container}>
       <Typography variant="h5" component="h1" className={style.title}>
-        440Hzを当てるやつ！
+        1050Hzを当てるやつ！
+      </Typography>
+      <Typography variant="h6" component="h2" className={style.title}>
+        ※東洋2レベルIGBTのアレ
       </Typography>
       <Slider
         value={sliderPos}
