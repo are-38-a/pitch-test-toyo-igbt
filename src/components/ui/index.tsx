@@ -1,7 +1,7 @@
 import { Button, Link, Slider, Typography } from "@material-ui/core"
 import { h } from "preact"
 import { useCallback, useState } from "preact/hooks"
-import * as style from "./style.css"
+import style from "./style.css"
 
 const sliderRange = 100
 const freqRange = sliderRange / 2
