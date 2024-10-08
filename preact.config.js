@@ -1,4 +1,5 @@
 import { resolve } from "path";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export default {
   /**
@@ -24,9 +25,18 @@ export default {
       };
     });
 
+    // Add MiniCssExtractPlugin configuration
+    config.plugins.push(
+      new MiniCssExtractPlugin({
+        filename: "[name].css",
+        chunkFilename: "[id].css",
+        ignoreOrder: true, // Ignore CSS order warnings
+      })
+    );
+
     // Use any `index` file, not just index.js
     config.resolve.alias["preact-cli-entrypoint"] = resolve(process.cwd(), "src", "index");
 
-    return config; // 追加: 変更を加えたconfigを返す
+    return config; // Return the modified config
   },
 };
