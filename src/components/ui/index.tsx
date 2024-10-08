@@ -72,7 +72,10 @@ function UI({ updateOscillator }: Props) {
   return (
     <div className={style.container}>
       <Typography variant="h5" component="h1" className={style.title}>
-        1050Hzを当てるやつ！(東洋2レベルIGBT非同期のアレ)
+        1050Hzを当てるやつ！
+      </Typography>
+      <Typography variant="h6" component="h2" className={style.title}>
+        ※東洋2レベルIGBTのアレ
       </Typography>
       <Slider
         value={sliderPos}
